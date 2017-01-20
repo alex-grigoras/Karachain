@@ -33,6 +33,6 @@ func (t *Karachain) Invoke(stub shim.ChaincodeStubInterface, function string, ar
 }
 
 func (t *Karachain) Init(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
-	shim.LogInfo("Hello " + args[0] + "!")
+	shim.NewLogger("gigi").Info("Hello " + args[0] +"!")
 	return nil, nil
 }
